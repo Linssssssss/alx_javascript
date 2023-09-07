@@ -10,3 +10,6 @@ A script that prints 3 lines
 
 Task 2:
 A script that prints 3 lines but using an array of string and a loop
+
+Task 3:
+A script to replace the value 12 with 89
