@@ -1,9 +1,8 @@
 #!/usr/bin/node
 class Rectangle {
   constructor(w, h) {
-    if (w <= 0 || h <= 0) {
-      // Create an empty object if w or h is not a positive integer or is equal to 0
-      return {};
+    if (w <= 0 || h <= 0 || typeof w !== "number" || typeof h !== "number") {
+      throw new Error("Width and height must be positive integers");
     }
 
     this.width = w;
