@@ -7,3 +7,6 @@ A script that prints 3 lines
 1. C is fun
 2. Python is cool
 3. Javascript is amazing
+
+Task 2:
+A script that prints 3 lines but using an array of string and a loop
