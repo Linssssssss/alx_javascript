@@ -16,3 +16,9 @@ A script to replace the value 12 with 89
 
 Task 4:
 A function that returns the addition of 2 intergers
+
+Task 5:
+A file that modifies the value of myVar to 333
+
+Task 6:
+A function that executes x times a function
