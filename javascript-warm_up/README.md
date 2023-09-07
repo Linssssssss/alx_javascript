@@ -22,3 +22,9 @@ A file that modifies the value of myVar to 333
 
 Task 6:
 A function that executes x times a function
+
+Task 7:
+A function that increments and calls a function
+
+Task 8:
+A script that adds a new function incr that increments the integer value
