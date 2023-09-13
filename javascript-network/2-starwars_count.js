@@ -1,28 +1,21 @@
+#!/usr/bin/node
 const request = require("request");
 
 const url = process.argv[2];
 
-const wedgeId = 18;
-
 request(url, (err, response, body) => {
   if (err) {
-    console.error(err);
-    return;
+    console.log(err);
+    process.exit(1);
   }
-
-  const films = JSON.parse(body);
+  const info = JSON.parse(body);
   let count = 0;
-
-  for (const film of films) {
-    const characters = film.characters;
-
-    for (const character of characters) {
-      if (character.id === wedgeId) {
+  for (const film of info.results) {
+    for (const character of film.characters) {
+      if (character.includes("18")) {
         count++;
-        break;
       }
     }
   }
-
   console.log(count);
 });
