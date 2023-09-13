@@ -1,19 +1,22 @@
+#!/usr/bin/node
 const request = require("request");
 
-const movieId = process.argv[2];
-
-const url = `https://swapi.dev/api/films/${movieId}/`;
+const url = process.argv[2];
 
 request(url, (err, response, body) => {
   if (err) {
-    console.error(err);
-    return;
+    console.log(err);
+    process.exit(1);
   }
-
-  const film = JSON.parse(body);
-  const characters = film.characters;
-
-  for (const character of characters) {
-    console.log(character);
+  const user = {};
+  for (const task of JSON.parse(body)) {
+    if (task.completed) {
+      if (user[task.userId]) {
+        user[task.userId]++;
+      } else {
+        user[task.userId] = 1;
+      }
+    }
   }
+  console.log(user);
 });
