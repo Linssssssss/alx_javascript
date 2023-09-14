@@ -1,12 +1,12 @@
+// FUNC - welcome
+
 function welcome(firstName, lastName) {
-  var fullName = firstName + " " + lastName;
-
+  let fullName = firstName + " " + lastName;
   function displayFullName() {
-    alert("Welcome " + fullName + "!");
+    alert("Welcome" + " " + fullName + "!");
   }
-
   displayFullName();
 }
 
-// Testing the function
-welcome("Holberton", "School");
+welcome("Name", "Last");
+alert(fullName);
