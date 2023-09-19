@@ -15,17 +15,6 @@ function setCookies() {
   }
 }
 
-function getCookie(name) {
-  const cookies = document.cookie.split("; ");
-  for (const cookie of cookies) {
-    const [cookieName, cookieValue] = cookie.split("=");
-    if (cookieName === name) {
-      return decodeURIComponent(cookieValue);
-    }
-  }
-  return "";
-}
-
 function showCookies() {
   const emailCookie = getCookie("email");
   const firstnameCookie = getCookie("firstname");
@@ -85,3 +74,25 @@ function showWelcomeMessageOrForm() {
     welcomeContainer.appendChild(welcomeMessage);
   }
 }
+function setCookiesAndShowWelcomeMessage() {
+  const firstnameInput = document.getElementById("firstname");
+  const emailInput = document.getElementById("email");
+
+  if (firstnameInput.value && emailInput.value) {
+    // Set cookies using js-cookie
+    Cookies.set("firstname", firstnameInput.value, { expires: 10 });
+    Cookies.set("email", emailInput.value, { expires: 10 });
+
+    // Show the welcome message
+    showWelcomeMessageOrForm();
+  }
+}
+
+function deleteCookiesAndShowForm() {
+  // Remove cookies using js-cookie
+  Cookies.remove("firstname");
+  Cookies.remove("email");
+
+  showForm();
+}
+showWelcomeMessageOrForm();
