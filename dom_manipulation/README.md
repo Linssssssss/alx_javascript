@@ -3,3 +3,8 @@ a JavaScript program that demonstrates the basic concept of the DOM by accessing
 
 Task 1:
 a JavaScript program that demonstrates the use of selectors to select specific HTML elements.
+
+Task 2:
+a JavaScript program that demonstrates the use of selectors to select specific HTML elements.
+
+Task 3:
